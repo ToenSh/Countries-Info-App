@@ -1,0 +1,14 @@
+:root {
+  --Elements-Color: hsl(209, 23%, 22%); //(Dark Mode Elements)
+  --Background-Color: hsl(207, 26%, 17%); //(Dark Mode Background)
+  --Text-Color: hsl(0, 0%, 100%);
+  --Box-Shadow-Color: rgba(37, 36, 36, 0.4);
+}
+
+[data-theme="light"] {
+  --Elements-Color: hsl(0, 0%, 100%); //(Dark Mode Elements)
+  --Background-Color: hsl(0, 0%, 98%); //(Dark Mode Background)
+  --Text-Color: hsl(200, 15%, 8%); //(Light Mode Text)
+  --Input-Color: hsl(0, 0%, 52%); // (Light Mode Input)
+  --Box-Shadow-Color: rgba(189, 183, 183, 0.4);
+}

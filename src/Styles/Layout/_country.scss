@@ -1,0 +1,62 @@
+@import "../GlobalStyles/colors";
+
+.countries-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  margin-inline: auto;
+  max-width: 75%;
+  padding-bottom: 2rem;
+}
+
+.country {
+  min-width: 100%;
+  color: var(--Text-Color);
+  background-color: var(--Elements-Color);
+  border-radius: 0.2rem;
+  box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+  -webkit-box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+  -moz-box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+  cursor: pointer;
+  &-info {
+    padding: 0 1.25rem 2rem 1.25rem;
+  }
+  &-name {
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: 700;
+  }
+}
+
+.flag-home {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  height: 11rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .countries-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .countries-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .countries-container {
+    gap: 4rem;
+    max-width: 80%;
+  }
+}

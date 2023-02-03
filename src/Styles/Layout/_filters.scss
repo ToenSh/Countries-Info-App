@@ -1,0 +1,76 @@
+@import "../GlobalStyles/colors";
+
+.filter-options {
+  max-width: 90%;
+  margin-inline: auto;
+
+  &__name {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  &__name::before {
+    position: absolute;
+    content: "";
+    background-image: url(./assets/magnifying-glass-solid.svg);
+    width: 15px;
+    height: 15px;
+    top: 0.75rem;
+    left: 1.5rem;
+    filter: brightness(0) invert(0.65);
+  }
+
+  &__inp {
+    font-family: inherit;
+    width: 100%;
+    background-color: var(--Elements-Color);
+    border: none;
+    color: var(--Text-Color);
+    padding: 0.75rem 1rem 0.75rem 4rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+    -webkit-box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+    -moz-box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+  }
+
+  &__region {
+    background-color: var(--Elements-Color);
+    font-family: inherit;
+    color: var(--Text-Color);
+    border: none;
+    outline: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+    -webkit-box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+    -moz-box-shadow: 0px 3px 10px -3px var(--Box-Shadow-Color);
+  }
+}
+
+@media (min-width: 600px) {
+  .filter-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__name {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  .filter-options {
+    margin-top: 2.5rem;
+  }
+  .filter-options__inp {
+    width: 150%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .filter-options {
+    max-width: 80%;
+  }
+}

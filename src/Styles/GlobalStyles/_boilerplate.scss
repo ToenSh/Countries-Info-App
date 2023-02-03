@@ -1,0 +1,54 @@
+@import "./colors";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  font-size: 14px;
+  background-color: var(--Background-Color);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.home {
+  margin-top: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.info {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.data {
+  font-weight: 300;
+}
+
+.extra-info {
+  margin: 2rem 0;
+}
+
+.flag-detailed {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.55);
+
+  @media (min-width: 600px) {
+    max-width: 70%;
+  }
+  @media (min-width: 1050px) {
+    max-width: 85%;
+  }
+}
