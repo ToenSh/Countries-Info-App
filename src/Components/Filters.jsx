@@ -26,6 +26,7 @@ export default function Filters(props) {
         <option value="" disabled hidden>
           Filter by Region
         </option>
+        <option value="all">All</option>
         <option value="africa">Africa</option>
         <option value="america">America</option>
         <option value="asia">Asia</option>

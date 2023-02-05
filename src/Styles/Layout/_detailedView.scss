@@ -84,10 +84,14 @@ h2 {
     grid-column: 1 / -1;
     margin-top: 3rem;
   }
+  .border-info > span {
+    margin-right: 1.5rem;
+  }
   .borders {
     display: inline-flex;
+    flex-wrap: wrap;
     gap: 1rem;
-    margin-left: 1rem;
+    justify-content: flex-start;
   }
   .extra-info {
     margin-top: 3.25rem;

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Border from "./Border";
 
 export default function DetailedView(props) {
   return (
@@ -25,7 +26,7 @@ export default function DetailedView(props) {
             Sub Region: <span className="data">{props.subRegion}</span>
           </div>
           <div className="info">
-            Capital: <span className="data">{props.Capital}</span>
+            Capital: <span className="data">{props.capital}</span>
           </div>
         </div>
         <div className="extra-info">
@@ -34,7 +35,7 @@ export default function DetailedView(props) {
             <span className="data">{props.topLevelDomain}</span>
           </div>
           <div className="info">
-            Currencies: <span className="data">{props.currencies}</span>
+            Currency: <span className="data">{props.currencies}</span>
           </div>
           <div className="info">
             Languages: <span className="data">{props.languages}</span>
@@ -44,9 +45,17 @@ export default function DetailedView(props) {
         <div className="border-info">
           <span className="info">Border Countries: </span>
           <div className="borders">
-            <button>France</button>
-            <button>Germany</button>
-            <button>Netherlands</button>
+            {props.borders
+              ? props.borders.map((border, index) => {
+                  return (
+                    <Border
+                      key={index}
+                      border={border}
+                      setClickedCountry={props.setClickedCountry}
+                    />
+                  );
+                })
+              : "None"}
           </div>
         </div>
       </div>
